@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>you</title>
+    <link rel="stylesheet" href="<%= BASE_URL %>css/reset.css">
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <title>网易严选</title>
   </head>
   <body>
     <noscript>
@@ -13,5 +15,12 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function () {
+          FastClick.attach(document.body);
+        }, false);
+      }
+    </script>
   </body>
 </html>

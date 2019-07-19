@@ -1,0 +1,44 @@
+//一css像素上边框
+top-border-1px($color)
+  position relative
+  &::before
+    content: ""
+    position: absolute
+    top 0
+    left 0
+    width 100%
+    height 1px
+    background-color: $color
+    z-index: 20
+
+//一css像素下边框
+bottom-border-1px($color)
+  position relative
+  &::before
+    content: ""
+    position: absolute
+    bottom 0
+    left 0
+    width 100%
+    height 1px
+    background-color: $color
+    z-index: 20
+
+//根据dpr来缩放css像素形成1物理像素的边框
+@media only screen and (-webkit-device-pixel-ratio:2)
+  .border-1px
+    &::before
+      transform scaleY(0.5)
+
+@media only screen and (-webkit-device-pixel-ratio:3)
+  .border-1px
+    &::before
+      transform scaleY(0.3333333)
+
+//清除浮动
+claerfix()
+  *zoom 1
+  &::after
+    content ""
+    display block
+    clear both
