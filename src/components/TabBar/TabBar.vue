@@ -33,17 +33,20 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import '../../assets/css/mixin.stylus';
   #tabbar
     width 100%
     height 49px
     .nav
-      position absolute
+      top-border-1px(#ddd)
+      position fixed
       left 0
       bottom 0
       width 100%
       height 49px
       display flex
       background-color #fff
+      z-index 5
       a
         display block
         width 20%

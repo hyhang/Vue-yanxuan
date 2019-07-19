@@ -19,7 +19,7 @@ export default [
   {
     path: '/cart',
     name: 'Cart',
-    component: () => import('../views/Cart.vue')
+    component: () => import('../views/Cart/Cart.vue')
   },
   {
     path: '/login',

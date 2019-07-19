@@ -17,7 +17,11 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import '../../assets/css/mixin.stylus';
   .homeHeader
+    position fixed
+    top 0px
+    left 0px
     width 100%
     height 44px
     background-color #ffffff
@@ -25,6 +29,8 @@
     display flex
     align-items center
     box-sizing border-box
+    z-index 2
+    clearfix()
     a
       width 69px
       height 20px

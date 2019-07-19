@@ -25,6 +25,7 @@
         pagination: {
           el: '.swiper-pagination',
           type: 'custom',
+          autoplay: true,
           renderCustom: function (swiper, current, total) {
             var _html = '';
             for ( var i = 1; i <= total; i++ ) {
@@ -36,8 +37,7 @@
               }
             return _html; //返回所有的页码html
           }
-        },
-        autoplay: 3000
+        }
       })
     }
   }

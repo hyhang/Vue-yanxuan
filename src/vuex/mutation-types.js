@@ -1,0 +1,1 @@
+export const RECEIVE_CATEGORIES = 'receive_categories'
