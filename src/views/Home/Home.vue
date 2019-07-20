@@ -20,6 +20,9 @@
     <Gift/>
     <Brand/>
     <SellWell/>
+    <Recommend/>
+    <Showcase/>
+    <BannerSlide/>
   </div>
 </template>
 
@@ -31,6 +34,9 @@
   import Tab from './components/Tab/Tab'
   import Brand from './components/Brand/Brand'
   import SellWell from './components/SellWell/SellWell'
+  import Recommend from './components/Recommend/Recommend'
+  import BannerSlide from './components/BannerSlide/BannerSlide'
+  import Showcase from './components/Showcase/ShowCase'
   export default {
     name: 'Home',
     components: {
@@ -40,7 +46,10 @@
       Gift,
       Tab,
       Brand,
-      SellWell
+      SellWell,
+      Recommend,
+      BannerSlide,
+      Showcase
     },
     mounted() {
       this.$store.dispatch('getHomeData')

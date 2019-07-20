@@ -58,8 +58,8 @@
   .sellWellWrapper
     width 100%
     box-sizing border-box
-    padding 0 15px 15px 15px
-    margin-bottom 20px
+    padding 0 10px 15px 15px
+    margin-bottom 10px
     background-color #fff
     .sellWellHeader
       height 50px

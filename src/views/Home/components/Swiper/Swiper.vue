@@ -22,10 +22,11 @@
     mounted(){
       new Swiper('.swiper-container', {
         loop: true,
+        autoplay: true,
+        speed: 1000,
         pagination: {
           el: '.swiper-pagination',
           type: 'custom',
-          autoplay: true,
           renderCustom: function (swiper, current, total) {
             var _html = '';
             for ( var i = 1; i <= total; i++ ) {
