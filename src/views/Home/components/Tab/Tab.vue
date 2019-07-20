@@ -3,27 +3,50 @@
     <div class="tabWrap">
       <div class="scroll">
         <ul class="tabInner">
-          <li class="active">推荐</li>
-          <li>居家生活</li>
-          <li>服饰鞋包</li>
-          <li>美食酒水</li>
-          <li>个护清洁</li>
-          <li>母婴亲子</li>
-          <li>运动旅行</li>
-          <li>数码家电</li>
-          <li>数码家电</li>
+          <li :class="index===currentIndex?'active':null" v-for="(item,index) in tab" :key="index" @click="handleClick(index)">{{item}}</li>
         </ul>
       </div>
       <div class="toggleWrap">
         <div class="liner"></div>
-        <div class="toggle"></div>
+        <div class="toggle" ></div>
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import BS from 'better-scroll'
+  import { mapState } from 'vuex'
   export default {
+    data() {
+      return {
+        currentIndex: 0,
+        showTabList: false
+      }
+    },
+    mounted() {
+      this.$store.dispatch('getTabData')
+    },
+    computed: {
+      ...mapState({
+        tab: state => state.home.tab
+      })
+    },
+    methods: {
+      handleClick(index) {
+        this.currentIndex = index
+      }
+    },
+    watch: {
+      tab() {
+        this.$nextTick(() => {
+          new BS('.scroll', {
+            click: true,
+            scrollX: true
+          })
+        })
+      }
+    }
   }
 </script>
 
@@ -61,7 +84,7 @@
           color #333
           &.active
             color #b4282d
-            border-bottom 3px solid #b4282d
+            border-bottom 2px solid #b4282d
     .toggleWrap
       display flex
       position absolute

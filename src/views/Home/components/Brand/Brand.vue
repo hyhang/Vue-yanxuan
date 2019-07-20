@@ -50,6 +50,7 @@
       color #333333
       .more
         margin-right 3px
+        font-size 14px
         i
           display inline-block
           width 6px
@@ -63,9 +64,11 @@
       flex-wrap wrap
       div 
         box-sizing border-box
-        width 50%
+        width 49%
+        flex-grow 1
         height 130px
         padding 11px 2px 2px 0
+        margin 0 2px 2px 0
         &.brand1
           background-image:url(http://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png?imageView&thumbnail=343y260&enlarge=1)
           background-size 100% 100%
@@ -83,6 +86,7 @@
           text-align center
           line-height 1.5
           color #7f7f7f
+          font-size 12px
         p
           color #333333
           font-size 14px

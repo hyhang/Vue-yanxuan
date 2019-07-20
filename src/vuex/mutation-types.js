@@ -1,1 +1,8 @@
 export const RECEIVE_CATEGORIES = 'receive_categories'
+export const RECEIVE_SWIPER = 'receive_swiper'
+export const RECEIVE_TAB = 'receive_tab'
+export const RECEIVE_RECOMMEND = 'receive_recommend'
+export const RECEIVE_CUTDOWN = 'receive_cutdown'
+export const RECEIVE_BANNERSLIDE = 'receive_bannerslide'
+export const RECEIVE_SERVICE = 'receive_service'
+export const RECEIVE_SELLWELL = 'receive_sellwell'

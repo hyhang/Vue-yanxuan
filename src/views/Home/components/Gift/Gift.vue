@@ -84,6 +84,7 @@
           .subTitle
             color #7f7f7f
             line-height 1.5
+            font-size 11px
         .module2
           background-color #FFECC2
           margin-top 2px
@@ -94,4 +95,5 @@
             padding 0 5px  
             line-height 1.5
             border-radius 3px
+            font-size 11px
 </style>

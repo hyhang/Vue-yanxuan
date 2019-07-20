@@ -1,14 +1,14 @@
 <template>
   <div class="bannerSlideWrapper">
-    <div class="banner"></div>
+    <div v-if="banner" class="banner" :style="'background-image: url('+ banner.bannerUrl +')'"></div>
     <div class="slide">
-      <ul>
-        <li>
-          <img src="https://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330" alt="">
-          <span class="name"></span>
+      <ul v-if="banner.item">
+        <li v-for="(good, index) in banner.item" :key="index">
+          <img :src="good.imgUrl" alt="">
+          <span class="name">{{good.name}}</span>
           <div class="priceWrapper">
-            <span class="price">￥29.4</span>
-            <span class="oldPrice">￥49</span>
+            <span class="price">￥{{good.price}}</span>
+            <span class="oldPrice" v-if="good.oldPrice"><s>￥{{good.oldPrice}}</s></span>
           </div>
           <div class="tagWrapper">
             <span class="tag"></span>
@@ -20,8 +20,28 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import { mapState } from 'vuex'
+  import BS from 'better-scroll'
   export default {
-    name: 'BannerSlide'
+    name: 'BannerSlide',
+    mounted() {
+      this.$store.dispatch('getBannerSlide')
+    },
+    computed: {
+      ...mapState({
+        banner: state => state.home.banner
+      })
+    },
+    watch: {
+      banner() {
+        this.$nextTick(() => {
+          new BS('.slide', {
+            click: true,
+            scrollX: true
+          })
+        })
+      }
+    }
   }
 </script>
 
@@ -29,16 +49,34 @@
   .bannerSlideWrapper
     background-color #fff
     width 100%
+    margin-bottom 10px
     .banner
       width 100%
       height 185px
-      background-image url(https://yanxuan.nosdn.127.net/a415cf841405c9c5e14e435d8c57408b.jpg?imageView&thumbnail=750x0&quality=75)
       background-size 100% 100%
       margin-bottom 10px
     .slide
-      padding 0 15px
+      overflow hidden
+      display flex
       ul 
         display flex
+        padding-left 15px
         li
-
+          width 100px
+          line-height 1.5
+          margin-right 10px
+          img 
+            width 100px
+            height 100px
+            background-color #f4f4f4
+          .name
+            font-size 12px
+          .priceWrapper
+            .price
+              font-size 12px
+              color #b4282d
+            .oldPrice
+              font-size 12px
+              color #999
+              margin-left 4px
 </style>

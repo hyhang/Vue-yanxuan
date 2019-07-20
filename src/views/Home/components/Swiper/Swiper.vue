@@ -2,11 +2,8 @@
   <div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="slideItem swiper-slide">
-          <img src="https://yanxuan.nosdn.127.net/542cc7564cffd33478c689c2380a9f91.jpg?imageView&quality=75&thumbnail=750x0" alt="">
-        </div>
-        <div class="slideItem swiper-slide">
-          <img src="https://yanxuan.nosdn.127.net/2f9c81a130447f34424a16a40d66cbba.jpg?imageView&quality=75&thumbnail=750x0" alt="">
+        <div class="slideItem swiper-slide" v-for="(imgUrl,index) in swiper" :key="index">
+          <img :src="imgUrl" alt="">
         </div>
       </div>
       <!-- 分页器 -->
@@ -18,28 +15,41 @@
 <script type="text/ecmascript-6">
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
+  import { mapState } from 'vuex'
   export default {
     mounted(){
-      new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: true,
-        speed: 1000,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'custom',
-          renderCustom: function (swiper, current, total) {
-            var _html = '';
-            for ( var i = 1; i <= total; i++ ) {
-            if ( current == i ) {
-              _html += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-            } else {
-              _html += '<span class="swiper-pagination-customs"></span>';
-            }
-              }
-            return _html; //返回所有的页码html
-          }
-        }
+      this.$store.dispatch('getSwiper')
+    },
+    computed: {
+      ...mapState({
+        swiper: state => state.home.swiper
       })
+    },
+    watch: {
+      swiper() {
+        this.$nextTick(() => {
+          new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: true,
+            speed: 1000,
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'custom',
+              renderCustom: function (swiper, current, total) {
+                var _html = '';
+                for ( var i = 1; i <= total; i++ ) {
+                if ( current == i ) {
+                  _html += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+                } else {
+                  _html += '<span class="swiper-pagination-customs"></span>';
+                }
+                  }
+                return _html; //返回所有的页码html
+              }
+            }
+          })
+        })
+      }
     }
   }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="homeHeader">
-    <router-link to="/"></router-link>
+    <router-link to="/" class="logo"></router-link>
     <Input/>
-    <div class="loginBtn">登录</div>
+    <router-link to="/login" class="loginBtn">登录</router-link>
   </div>
 </template>
 
@@ -31,7 +31,7 @@
     box-sizing border-box
     z-index 2
     clearfix()
-    a
+    .logo
       width 69px
       height 20px
       margin 0 10px 0 0

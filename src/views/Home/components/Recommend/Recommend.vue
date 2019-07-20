@@ -8,38 +8,22 @@
       </div>
     </div>
     <div class="recommendContent">
-      <div class="spitem">
-        <img src="https://yanxuan.nosdn.127.net/85a480bd9a852da923b8d3b5c7f7b759.png?imageView&quality=65&thumbnail=280x280" alt="">
+      <div class="spitem" v-if="recommend.spitem">
+        <img :src="recommend.spitem.imgUrl" alt="">
         <div class="spitemContent">
-          <span class="statusTag">每满99减15券</span>
-          <div class="name">全棉针织条纹大豆纤维夏被 可机洗</div>
-          <div class="desc">可裸睡针织棉，植物抗菌柔弹</div>
-          <span class="price">￥199</span>
+          <span class="statusTag">{{recommend.spitem.statusTag}}</span>
+          <div class="name">{{recommend.spitem.name}}</div>
+          <div class="desc">{{recommend.spitem.desc}}</div>
+          <span class="price">￥{{recommend.spitem.price}}</span>
         </div>
       </div>
-      <ul>
-        <li>
-          <img src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330" alt="">
-          <span class="name">红豆薏米丸 100克</span>
-          <span class="price">￥39</span>
-          <div class="tagWrapper">
-            <p class="statusGradientPrice">加价购</p>
-          </div>
-        </li>
-        <li>
-          <img src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330" alt="">
-          <span class="name">红豆薏米丸 100克</span>
-          <span class="price">￥39</span>
-          <div class="tagWrapper">
-            <p class="statusGradientPrice">加价购</p>
-          </div>
-        </li>
-        <li>
-          <img src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330" alt="">
-          <span class="name">红豆薏米丸 100克</span>
-          <span class="price">￥39</span>
-          <div class="tagWrapper">
-            <p class="statusGradientPrice">加价购</p>
+      <ul v-if="recommend.item">
+        <li v-for="(good, index) in recommend.item" :key="index">
+          <img :src="good.imgUrl" alt="">
+          <span class="name">{{good.name}}</span>
+          <span class="price">￥{{good.price}}</span>
+          <div class="tagWrapper" v-if="good.status">
+            <p class="statusGradientPrice">{{good.status}}</p>
           </div>
         </li>
       </ul>
@@ -48,8 +32,17 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import { mapState } from 'vuex'
   export default {
-    name: 'Recommend'
+    name: 'Recommend',
+    mounted() {
+      this.$store.dispatch('getReCommend')
+    },
+    computed: {
+      ...mapState({
+        recommend: state => state.home.recommend
+      }),
+    }
   }
 </script>
 
@@ -69,6 +62,7 @@
       color #333333
       .more
         margin-right 3px
+        font-size 14px
         i
           display inline-block
           width 6px
@@ -113,6 +107,7 @@
           .desc
             color #7f7f7f
             margin 4px 0 8px
+            font-size 12px
           .price
             color #b4282d
             font-size 14px

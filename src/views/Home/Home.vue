@@ -5,14 +5,8 @@
     <Swiper/>
     <div class="ServicePolicy">
       <ul>
-        <li class="item">
-          <i></i><span>网易自营品牌</span>
-        </li>
-        <li class="item">
-          <i></i><span>30天无忧退货</span>
-        </li>
-        <li class="item">
-          <i></i><span>48小时快速退款</span>
+        <li class="item" v-for="(item,index) in service" :key="index">
+          <i :style="'background-image:url('+ item.icon +')'"></i><span>{{item.desc}}</span>
         </li>
       </ul>
     </div>
@@ -37,6 +31,7 @@
   import Recommend from './components/Recommend/Recommend'
   import BannerSlide from './components/BannerSlide/BannerSlide'
   import Showcase from './components/Showcase/ShowCase'
+  import { mapState } from 'vuex'
   export default {
     name: 'Home',
     components: {
@@ -51,8 +46,14 @@
       BannerSlide,
       Showcase
     },
+    computed: {
+      ...mapState({
+        service: state => state.home.service
+      })
+    },
     mounted() {
-      this.$store.dispatch('getHomeData')
+      this.$store.dispatch('getCategories'),
+      this.$store.dispatch('getService')
     }
   }
 </script>
@@ -82,6 +83,4 @@
             height 16px
             background-repeat no-repeat
             background-size 100% 100%
-          i:nth-child(1)
-            background-image:url(http://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png)
 </style>

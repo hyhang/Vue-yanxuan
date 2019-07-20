@@ -1,0 +1,262 @@
+{
+  "tip1": "-----------------服务策略-----------------",
+  "policyDescList": [
+    {
+      "icon": "https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png",
+      "schemeUrl": "",
+      "desc": "网易自营品牌"
+    },
+    {
+      "icon": "https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png",
+      "schemeUrl": "",
+      "desc": "30天无忧退货"
+    },
+    {
+      "icon": "https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png",
+      "schemeUrl": "",
+      "desc": "48小时快速退款"
+    }
+  ],
+  "tip2": "-----------------轮播图片-----------------",
+  "swiperImg": [
+    "https://yanxuan.nosdn.127.net/3d087e9e13b33629355a9163e9d13ae7.jpg?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/7c1ce80acc7625c23246cc99e9cd8f4a.png?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/5a8fdfaa42b384309a0e7425305fabed.jpg?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/542cc7564cffd33478c689c2380a9f91.jpg?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/8d2af3ab55bf51d5ac03e5d9c6fa1fc4.jpg?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/e1838f8442e7bfef014070ff902a698f.jpg?imageView&quality=75&thumbnail=750x0",
+    "https://yanxuan.nosdn.127.net/dc972eece406987cbdd29f8849055d45.jpg?imageView&quality=75&thumbnail=750x0"
+  ],
+  "tip3": "-----------------上部Tab-----------------",
+  "Tab": [
+    "推荐","居家生活","服饰鞋包","美食酒水","个护清洁","母婴亲子","运动旅行","数码家电","全球特色"
+  ],
+  "tip4": "-----------------商品导航-----------------",
+  "kingKongModule": {
+    "norColor": "ff000000",
+    "background": "http://yanxuan.nosdn.127.net/54e38f7ee78d0f85a56fc8bf58bf36d3.png",
+    "kingKongList": [
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/fede8b110c502ec5799702d5ec824792.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1005000&style=pd",
+        "text": "居家生活",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/fb9dde0c1593536c18c8e12b6f49eb17.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1008000&style=pd",
+        "text": "服饰鞋包",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/d916591adea776351e084016335e5820.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1010000&style=pd",
+        "text": "美食酒水",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/6c3bd9d885c818b1f73e497335a68b47.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1043000&style=pd",
+        "text": "个护清洁",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/63682bd2df06963251b2715e20f98a75.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1011000&style=pd",
+        "text": "限时购",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1005002&style=pd",
+        "text": "母婴亲子",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/5c088559ebcc3f0ffcda663f04dfbeb2.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1013001&style=pd",
+        "text": "运动旅行",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/47e953a95e4378907b131205ce3cbc45.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1005001&style=pd",
+        "text": "数码家电",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/fbca8e1f2948f0c09fc7672c2c125384.png",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1019000&style=pd",
+        "text": "全球特色",
+        "textColor": "333333"
+      },
+      {
+        "picUrl": "http://yanxuan.nosdn.127.net/861a521a6f53e3399205f18daa23cddc.gif",
+        "schemeUrl": "http://m.you.163.com/item/list?categoryId=1065000&style=pd",
+        "text": "超级会员",
+        "textColor": "333333"
+      }
+    ]},
+  "tip5": "-----------------人气推荐-----------------",
+  "recommend": {
+    "spitem": {
+      "imgUrl": "https://yanxuan.nosdn.127.net/85a480bd9a852da923b8d3b5c7f7b759.png?imageView&quality=65&thumbnail=280x280",
+      "statusTag": "每满99减15券",
+      "name": "全棉针织条纹大豆纤维夏被 可机洗",
+      "desc": "可裸睡针织棉，植物抗菌柔弹",
+      "price": "199"
+    },
+    "item": [
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/d2abd30e0296cdee86f1bdd9242c0937.png?imageView&quality=65&thumbnail=330x330",
+        "status": "特价",
+        "name": "无损风味 超即溶精品咖啡（...",
+        "price": "189"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/604941c1a657e49f4114dabb201ab2aa.png?imageView&quality=65&thumbnail=330x330",
+        "name": "智能降温保冷杯",
+        "price": "199"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/ecee79b50e2364ec4abbae6c26a983a4.png?imageView&quality=65&thumbnail=330x330",
+        "status": "特价",
+        "name": "追风 男式轻弹慢跑运动鞋",
+        "price": "155"
+      }
+    ]
+  },
+  "tip6": "-----------------限时购-----------------",
+  "cutdown": [
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/6ae6ced6f3fd805d9e00b4f29a34efd3.png?imageView&thumbnail=216x216&quality=75",
+      "price": "116",
+      "oldPrice": "129"
+    },
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/2a9133e507f0e30307d72cecb182b87c.png?imageView&thumbnail=216x216&quality=75",
+      "price": "44.1",
+      "oldPrice": "49"
+    },
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/1bac4e9f7aadba172af28cbe55e8d224.png?imageView&thumbnail=216x216&quality=75",
+      "price": "358",
+      "oldPrice": "458"
+    },
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/e17e066b0507ff34b0b7fb3bd9a0711d.png?imageView&thumbnail=216x216&quality=75",
+      "price": "159",
+      "oldPrice": "199"
+    },
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/a1eb9b7831fa98d717ec27477a62faa9.png?imageView&thumbnail=216x216&quality=75",
+      "price": "319",
+      "oldPrice": "369"
+    },
+    {
+      "imgURL": "https://yanxuan.nosdn.127.net/07868f3cd11fec79f13c90c9e795fefe.png?imageView&thumbnail=216x216&quality=75",
+      "price": "559",
+      "oldPrice": "699"
+    }
+  ],
+  "tip7": "-----------------BannerSlide-----------------",
+  "BannerSlide": {
+    "bannerUrl": "https://yanxuan.nosdn.127.net/a415cf841405c9c5e14e435d8c57408b.jpg?imageView&thumbnail=750x0&quality=75",
+    "item": [
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330",
+        "name": "6包/提 谷风一木3层软抽面巾纸",
+        "price": "16.9"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/a10ed5c19533c9e1e2abf1d8cb843c24.png?imageView&quality=65&thumbnail=330x330",
+        "name": "10卷/提 谷风一木3层小卷纸",
+        "price": "27.9"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/58024eba2c1d1c1ff717881eb908dbc1.png?imageView&quality=65&thumbnail=330x330",
+        "name": "随卷随心电动造型器",
+        "price": "239",
+        "status": "2件7折"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/ca2f3c9c7283ee55dd18c9fa8c15d1c5.png?imageView&quality=65&thumbnail=330x330",
+        "name": "韩国制造 花洒替换滤芯 两只装",
+        "price": "49",
+        "status": "满折"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/b8c1c8fd3175ac2b85681755ab55daf8.png?imageView&quality=65&thumbnail=330x330",
+        "name": "清雅白茶凝萃洗发护发组合",
+        "price": "59.9",
+        "status": "2件8折"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/75bf2a5761cff9f170bd972b487b0d15.png?imageView&quality=65&thumbnail=330x330",
+        "name": "云感纯棉日用卫生巾",
+        "price": "16.9",
+        "status": "2件8折"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/569ab2c87df93c56de39b8c890463242.png?imageView&quality=65&thumbnail=330x330",
+        "name": "防串染洗衣吸色布",
+        "price": "9.9",
+        "status": "超值价"
+      },
+      {
+        "imgUrl": "https://yanxuan.nosdn.127.net/894b48e0a0dc9ed949da5a995e4114ad.png?imageView&quality=65&thumbnail=330x330",
+        "name": "射频导入嫩肤仪",
+        "price": "399",
+        "oldPrice": "499",
+        "status": "抄底特惠"
+      }
+    ]
+  },
+  "tip8": "-----------------SellWell-----------------",
+  "SellWell": {
+    "bigItemLeft": {
+      "imgUrl": "https://yanxuan.nosdn.127.net/06388e29fad0b7e8a9d6b1f398e5dcd3.png?imageView&quality=65&thumbnail=200x200",
+      "name": "热销榜",
+      "bgColor": "#F9F3E4"
+    },
+    "bigItemRight": {
+      "imgUrl": "https://yanxuan.nosdn.127.net/736910b062c81b336a0418062a80bc5c.png?imageView&quality=65&thumbnail=200x200",
+      "name": "好评榜",
+      "bgColor": "#EBEFF6"
+    },
+    "items": [
+      {
+        "name": "居家生活榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/b3a401594caf734b7fd843df7ffea1a6.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "服饰鞋包榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/f0e6ed6b4903403f5fafbedfac2d299d.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "美食酒水榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/e37656ecad9a2494f456e222fe7800a2.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "个护清洁榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/fddaa18690fa0b53d2d59ab7bd26b8f9.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "数码家电榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/227848eddc10ee787cbccb6f315fb963.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "运动旅行榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/c27abf14fa51f922122d9c81d7e68bd8.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "母婴亲子榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/f444ac11115a8249a92dc95dccad6e07.png?imageView&quality=65&thumbnail=200x200"
+      },
+      {
+        "name": "全球特色榜",
+        "imgUrl": "https://yanxuan.nosdn.127.net/16b4d581afc5a9cd36e8adc8ed6ceb4f.png?imageView&quality=65&thumbnail=200x200"
+      }
+    ]
+  }
+}

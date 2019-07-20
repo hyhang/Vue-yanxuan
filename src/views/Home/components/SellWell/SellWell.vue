@@ -3,54 +3,35 @@
     <div class="sellWellHeader">
       类目热销榜
     </div>
-    <div class="sellWellContent">
+    <div class="sellWellContent" v-if="sellwell.items">
       <div class="bigItem left">
-        <span>热销榜</span>
-        <img src="http://yanxuan.nosdn.127.net/06388e29fad0b7e8a9d6b1f398e5dcd3.png?imageView&quality=65&thumbnail=200x200" alt="">
+        <span>{{sellwell.bigItemLeft.name}}</span>
+        <img :src="sellwell.bigItemLeft.imgUrl" alt="">
       </div>
       <div class="bigItem right">
-        <span>好评榜</span>
-        <img src="http://yanxuan.nosdn.127.net/7dd208d4eb386ca3fc0f794963a0d70e.png?imageView&quality=65&thumbnail=200x200" alt="">
+        <span>{{sellwell.bigItemRight.name}}</span>
+        <img :src="sellwell.bigItemRight.imgUrl" alt="">
       </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
-      </div>
-      <div class="item">
-        <div>居家生活榜</div>
-        <img src="http://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200" alt="">
+      <div class="item" v-for="leaderBoard in sellwell.items" :key="leaderBoard.name">
+        <div>{{leaderBoard.name}}</div>
+        <img :src="leaderBoard.imgUrl" alt="">
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import { mapState } from 'vuex'
   export default {
-    name: 'SellWell'
+    name: 'SellWell',
+    mounted() {
+      this.$store.dispatch('getSellWell')
+    },
+    computed: {
+      ...mapState({
+        sellwell: state => state.home.sellwell
+      })
+    }
   }
 </script>
 
@@ -104,6 +85,8 @@
         box-sizing border-box
         margin 0 5px 5px 0
         background-color #f5f5f5
+        div
+          font-size 12px
         img 
           width 60px
           height 60px
