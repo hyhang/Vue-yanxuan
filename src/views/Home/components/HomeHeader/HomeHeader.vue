@@ -7,7 +7,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Input from '../Input/Input'
+  import Input from '../../../../components/Input/Input'
   export default {
     name: 'HomeHeader',
     components: {
@@ -17,7 +17,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import '../../assets/css/mixin.stylus';
+  @import '../../../../assets/css/mixin.stylus';
   .homeHeader
     position fixed
     top 0px
@@ -29,7 +29,7 @@
     display flex
     align-items center
     box-sizing border-box
-    z-index 2
+    z-index 5
     clearfix()
     .logo
       width 69px

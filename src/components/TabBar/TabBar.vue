@@ -1,23 +1,23 @@
 <template>
   <div id="tabbar">
-    <div class="nav">
-      <router-link to="/" class="home active">
+    <div class="nav" v-if="$route.meta.isShow">
+      <router-link to="/" class="home" :class="$route.path==='/'?'active':null">
         <i></i>
         <span>首页</span>
       </router-link>
-      <router-link to="/cateList" class="cateList">
+      <router-link to="/cateList" class="cateList" :class="$route.path==='/cateList/category'?'active':null">
         <i></i>
         <span>分类</span>
       </router-link>
-      <router-link to="/topic" class="topic">
+      <router-link to="/topic" class="topic" :class="$route.path.indexOf('/topic')===0?'active':null">
         <i></i>
         <span>识物</span>
       </router-link>
-      <router-link to="/cart" class="cart">
+      <router-link to="/cart" class="cart" :class="$route.path==='/cart'?'active':null">
         <i></i>
         <span>购物车</span>
       </router-link>
-      <router-link to="/login" class="login">
+      <router-link to="/login" class="login" :class="$route.path==='/login'?'active':null">
         <i></i>
         <span>我的</span>
       </router-link>
@@ -36,7 +36,7 @@
   @import '../../assets/css/mixin.stylus';
   #tabbar
     width 100%
-    height 49px
+    height 100%
     .nav
       top-border-1px(#ddd)
       position fixed

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import HomeHeader from '../../components/HomeHeader/HomeHeader'
+  import HomeHeader from './components/HomeHeader/HomeHeader'
   import Categories from './components/Categories/Categories'
   import Swiper from './components/Swiper/Swiper.vue'
   import Gift from './components/Gift/Gift'
