@@ -1,8 +1,8 @@
 <template>
   <div class="recommendWrapper">
-    <div class="scroll" v-if="recommend[0]" ref="topics">
+    <div class="scroll"  ref="topics">
       <div class="ad">
-        <img :src="recommend[0].ad.picUrl" alt="">
+        <img :src="recommend[0].ad.picUrl" v-if="recommend[0]" alt="">
       </div>
       <div class="recommends" v-for="(item,index) in recommend" :key="index">
         <div class="topics" v-for="(topic,index) in recommend[index].topics" :key="index">
@@ -84,12 +84,11 @@
 
 <script type="text/ecmascript-6">
   import { mapState } from 'vuex'
-  import BS from 'better-scroll'
   export default {
     name: 'Recommend',
     data() {
       return {
-        limitScrollValue: 581,
+        limitScrollValue: 667,
         page: 1,
         topicsHeight: 0
       }
@@ -103,10 +102,7 @@
       ...mapState({
         recommend: state => state.topic.recommend,
         autotopic: state => state.topic.autotopic,
-      }),
-      result() {
-        return this.recommend
-      }
+      })
     },
     methods: {
       handleScroll () {
@@ -114,25 +110,20 @@
         this.topicsHeight = this.$refs.topics.offsetHeight
         console.log(this.topicsHeight - scrollHeight , this.limitScrollValue);
         let isSending = false
-          if (Math.floor(this.topicsHeight - scrollHeight) <= this.limitScrollValue && !isSending) {
-            isSending = !isSending
-            console.log(isSending)
-            setTimeout(() => {
-              isSending = !isSending
-            }, 5000)
-            this.$store.dispatch('getAutoTopic',this.page)
-            this.page = this.page + 1
-          }
+        if (Math.floor(this.topicsHeight - scrollHeight) <= this.limitScrollValue && isSending===false) {
+          isSending = true
+          console.log(isSending)
+          setTimeout(() => {
+            isSending = false
+          }, 3000)
+          this.$store.dispatch('getAutoTopic',this.page)
+          this.page = this.page + 1
+        }
       }
     },
-    // watch: {
-    //   recommend() {
-    //     new BS('.recommendWrapper', {
-    //       scrollY: true,
-    //       click: true
-    //     })
-    //   }
-    // }
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 </script>
 
@@ -140,16 +131,13 @@
   .recommendWrapper
     width 100%
     height 100%
-    padding-top 86px
     .scroll
       width 100%
       display flex
       flex-shrink 0
       flex-wrap wrap
       padding-bottom 50px
-      margin-bottom -50px
-      // padding-top 86px
-      // margin-top -86px
+      padding-top 86px
       .ad
         width 100%
         height 224px
@@ -220,5 +208,6 @@
             padding-top 4px
         img 
           width 136px
+          height 136px
           border-radius 4px
 </style>
