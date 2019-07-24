@@ -23,7 +23,7 @@
     <div class="img">
       <span class="text">去添加点什么吧</span>
     </div>
-    <div class="nocart">登录</div>
+    <div class="nocart" @click="$router.push('/login')">登录</div>
   </div>
 </template>
 

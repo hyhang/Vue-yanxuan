@@ -3,8 +3,8 @@
     <div class="headerContent">
       <router-link to="/" class="home" replace></router-link>
       <div class="nav">
-        <span class="active">发现</span>
-        <span >甄选家</span>
+        <span class="active" @click="$router.push('/topic/0')">发现</span>
+        <span @click="$router.push('/expert')">甄选家</span>
       </div>
       <div class="right">
         <router-link to="/" class="search"></router-link>
@@ -27,6 +27,7 @@
     position fixed
     top 0
     left 0
+    z-index 5
     .headerContent
       padding 0 12px  
       height 50px

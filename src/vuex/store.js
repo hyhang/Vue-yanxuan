@@ -5,6 +5,7 @@ import actions from './actions'
 import home from './modules/home'
 import categoryList from './modules/categoryList'
 import topic from './modules/topic'
+import search from './modules/search'
 
 Vue.use(Vuex)
 
@@ -14,6 +15,7 @@ export default new Vuex.Store({
   modules: {
     home,
     categoryList,
-    topic
+    topic,
+    search
   }
 })

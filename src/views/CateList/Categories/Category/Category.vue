@@ -63,13 +63,16 @@
     overflow hidden
     .inner 
       padding 20px 15px 10px
-      min-height 600px
+      min-height 575px
+      box-sizing border-box
       img 
         width 100%
         height 96px
       ul
         display flex
         flex-wrap wrap
+        padding-bottom 50px
+        margin-bottom -50px
         li
           width 72px
           margin-right 22px

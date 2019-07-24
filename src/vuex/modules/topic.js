@@ -1,8 +1,9 @@
-import { reqTopicTabs, reqRecommendTopic } from '../../api/'
+import { reqTopicTabs, reqRecommendTopic, reqAutoTopic } from '../../api/'
 
 const state = {
   tabs: [],
-  recommend: []
+  recommend: [],
+  autotopic: []
 }
 
 const mutations = {
@@ -11,6 +12,9 @@ const mutations = {
   },
   'receive_recommend'(state, recommend) {
     state.recommend = recommend
+  },
+  'receive_autotopic'(state, autotopic) {
+    state.autotopic.push(autotopic)
   }
 }
 
@@ -24,6 +28,11 @@ const actions = {
     const result = await reqRecommendTopic()
     const recommend = result.data
     commit('receive_recommend', recommend)
+  },
+  async getAutoTopic({commit}, page) {
+    const result = await reqAutoTopic(page)
+    const autoTopic = result.data
+    commit('receive_autotopic', autoTopic)
   }
 }
 

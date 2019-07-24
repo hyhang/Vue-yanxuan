@@ -56,6 +56,7 @@
   @import '../../assets/css/mixin.stylus'
   .TopicWrapper
     width 100%
+    height 100%
     background-color #f4f4f4
     .tabs
       height 36px
@@ -66,6 +67,7 @@
       position fixed
       top 50px
       left 0
+      z-index 5
       ul
         display flex
         flex-shrink 0

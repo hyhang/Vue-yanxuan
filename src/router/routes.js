@@ -58,6 +58,13 @@ export default [
     component: () => import('../views/Expert/Expert.vue')
   },
   {
+    path: '/search',
+    meta: {
+      isShow:false
+    },
+    component: () => import('../views/Search/Search.vue')
+  },
+  {
     path: '/cart',
     meta: {
       isShow:true

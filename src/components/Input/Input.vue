@@ -1,5 +1,5 @@
 <template>
-  <div id="headerInput">
+  <div id="headerInput" @click="$router.push('/search')">
     <i class="icon"></i>
     <span class="placeholder">搜索商品, 共21742款好物</span>
   </div>
