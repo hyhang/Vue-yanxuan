@@ -88,9 +88,10 @@
     name: 'Recommend',
     data() {
       return {
-        limitScrollValue: 667,
+        limitScrollValue: 930,
         page: 1,
-        topicsHeight: 0
+        topicsHeight: 0,
+        isSending: false
       }
     },
     mounted() {
@@ -102,23 +103,30 @@
       ...mapState({
         recommend: state => state.topic.recommend,
         autotopic: state => state.topic.autotopic,
-      })
+      }),
+      autotopicUpdated() {
+        return this.autotopic
+      }
     },
     methods: {
       handleScroll () {
         let scrollHeight = document.documentElement.scrollTop
         this.topicsHeight = this.$refs.topics.offsetHeight
         console.log(this.topicsHeight - scrollHeight , this.limitScrollValue);
-        let isSending = false
-        if (Math.floor(this.topicsHeight - scrollHeight) <= this.limitScrollValue && isSending===false) {
-          isSending = true
-          console.log(isSending)
-          setTimeout(() => {
-            isSending = false
-          }, 3000)
-          this.$store.dispatch('getAutoTopic',this.page)
-          this.page = this.page + 1
+        if (Math.floor(this.topicsHeight - scrollHeight) <= this.limitScrollValue && this.isSending===false) {
+          this.isSending = true
+          this.timer = setTimeout(() => {
+            this.timer && clearTimeout(this.timer)
+            this.$store.dispatch('getAutoTopic',this.page)
+            this.page = this.page + 1
+          }, 200)
+          
         }
+      }
+    },
+    watch: {
+      autotopicUpdated() {
+        this.isSending = false
       }
     },
     beforeDestroy() {
